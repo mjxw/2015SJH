@@ -66,7 +66,7 @@ $(function() {
 
     // Donut Chart
     Morris.Donut({
-        element: 'morris-donut-chart',
+        element: 'morris-donut-chart-east',
         data: [{
             label: "% Of Calls Not Reported On",
             value: 62.4  
@@ -76,6 +76,19 @@ $(function() {
         }],
         resize: true
     });
+
+ var westGraph = Morris.Donut({
+        element : 'morris-donut-chart-west',
+        data: [{
+            label: "% Of Calls Not Reported On",
+            value: 62.4  
+        }, {
+            label: "% Of Calls Reported On",
+            value: 37.6
+        }],
+        resize: true
+    });
+    westGraph.redraw();
 
 
     // Line Chart
